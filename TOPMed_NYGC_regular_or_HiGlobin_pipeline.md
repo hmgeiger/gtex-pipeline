@@ -2,7 +2,7 @@
 
 ### *Note: this is a draft of the next pipeline iteration. Software and reference versions may change.*
 
-This document is an extension of the documentation provided [here](https://github.com/broadinstitute/gtex-pipeline/blob/master/TOPMed_RNAseq_pipeline.md) by the Broad Institute.
+This document is an extension of the documentation provided [here](https://github.com/hmgeiger/gtex-pipeline/blob/patch-1/TOPMed_RNAseq_pipeline.md), initially by the Broad Institute, with only slight modifications for clarification added by NYGC.
 
 However, one important note is that the NYGC version of the pipeline was updated more recently, and so the version of STAR is different (v2.7.11b for NYGC, versus v2.7.10a for the Broad).
 
@@ -10,7 +10,7 @@ The instructions below also include an assumption of 150bp reads, rather than 10
 
 NYGC is not currently hosting the compiled reference files for this pipeline, in cases where they differ from those of the Broad. But these may be generated from publicly available files, using the instructions below.
 
-The below instructions will focus on the steps needed to create the input for the STAR index creation (genomeGenerate) step. This does not include collapsing the annotation, which only applies to the RNA-SeQC step.
+The below instructions will focus on the STAR alignment step. The other components of the pipeline (such as RSEM and RNA-SeQC), should be the same as the Broad pipeline.
 
 #### Genome reference
 
