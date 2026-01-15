@@ -286,9 +286,9 @@ The following variables must be defined:
 
 Note, the above RNA-SeQC command does not include calculation of fragment sizes.
 
-To do that, you will need the bed file available [here] (https://raw.githubusercontent.com/hmgeiger/gtex-pipeline/refs/heads/patch-1/small_ref_files/gencode.v39.GRCh38.insert_size_intervals_geq1000bp.bed).
+To do that, you will need the bed file available [here](https://raw.githubusercontent.com/hmgeiger/gtex-pipeline/refs/heads/patch-1/small_ref_files/gencode.v39.GRCh38.insert_size_intervals_geq1000bp.bed).
 
-This bed file was generated following the instructions from the [RNA-SeQC documentation] (https://github.com/getzlab/rnaseqc/tree/master/python#insert-size-distributions).
+This bed file was generated following the instructions from the [RNA-SeQC documentation](https://github.com/getzlab/rnaseqc/tree/master/python#insert-size-distributions).
 
 Code for generation of that bed file (need a mappability BigWig file - do not currently have documentation on how to generate that):
 
