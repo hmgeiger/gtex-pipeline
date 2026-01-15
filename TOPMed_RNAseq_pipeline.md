@@ -284,6 +284,28 @@ The following variables must be defined:
         -s ${sample_id} --stranded rf -vv
     ```
 
+Note, the above RNA-SeQC command does not include calculation of fragment sizes.
+
+To do that, you will need the bed file available [here] (https://raw.githubusercontent.com/hmgeiger/gtex-pipeline/refs/heads/patch-1/small_ref_files/gencode.v39.GRCh38.insert_size_intervals_geq1000bp.bed).
+
+This bed file was generated following the instructions from the [RNA-SeQC documentation] (https://github.com/getzlab/rnaseqc/tree/master/python#insert-size-distributions).
+
+Code for generation of that bed file (need a mappability BigWig file - do not currently have documentation on how to generate that):
+
+```bash
+python3 -m rnaseqc insert-size \
+    gencode.v39.annotation.gtf \
+    GRCh38_no_alt_analysis_set_GCA_000001405.15-k50_m2.bw \
+    gencode.v39.GRCh38.insert_size_intervals
+```
+
+Next, add the appropriate argument and referencde to the bed file when running RNA-SeQC.
+
+```bash
+rnaseqc ${genes_gtf} ${md_bam_file} . \
+        -s ${sample_id} --stranded rf -vv --bed gencode.v39.GRCh38.insert_size_intervals_geq1000bp.bed
+```
+
 ### Appendix: wrapper scripts from the GTEx pipeline
 This section provides the commands used to run each step of the pipeline based on the wrapper scripts from the [GTEx pipeline](https://github.com/broadinstitute/gtex-pipeline/tree/master/rnaseq).
 
