@@ -134,7 +134,7 @@ The reference annotations were prepared as follows:
     cat gencode.v39.GRCh38.annotation.gtf ERCC92.patched.gtf \
         > gencode.v39.GRCh38.annotation.ERCC.gtf
     cat gencode.v39.GRCh38.genes.stranded.gtf ERCC92.patched.gtf \
-        > ggencode.v39.GRCh38.ERCC.genes.stranded.gtf
+        > gencode.v39.GRCh38.ERCC.genes.stranded.gtf
     ```
 
 #### STAR index
